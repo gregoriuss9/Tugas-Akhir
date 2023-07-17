@@ -1,0 +1,44 @@
+&CONTROL
+calculation = 'bands'
+prefix = 'Al2O2'
+outdir = './work'
+pseudo_dir = '/home/mainadmin/research/danu/pseudo'
+verbosity ='high'
+/
+
+&SYSTEM
+ibrav = 0
+nat = 4
+ntyp = 2
+ecutwfc=60
+ecutrho=240
+input_dft='vdw-df2-b86r'
+nbnd = 30
+/
+
+&ELECTRONS
+conv_thr = 1d-8
+mixing_beta = 0.5
+/
+
+ATOMIC_SPECIES
+Al 26.981 Al.pbe-n-kjpaw_psl.1.0.0.UPF
+O  15.999 O.pbe-n-kjpaw_psl.1.0.0.UPF
+
+CELL_PARAMETERS (angstrom)
+   2.569170267   1.484957960   0.000000000
+   2.569170267  -1.484957960   0.000000000
+   0.000000000   0.000000000  25.000000000
+
+ATOMIC_POSITIONS (crystal)
+O             0.6667673408        0.6667673408        0.4228858941
+Al            0.3332653005        0.3332653005        0.4490406471
+Al            0.3332341697        0.3332341697        0.5535762110
+O             0.6667331890        0.6667331890        0.5797282478
+
+K_POINTS {crystal_b}
+4
+0.00000 0.00000 0.00000 30 !G
+0.66648 0.33352 0.00000 30 !K
+0.50000 0.50000 0.00000 30 !M
+0.00000 0.00000 0.00000 0  !G
