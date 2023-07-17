@@ -1,0 +1,7 @@
+&DOS
+ outdir = './work'
+ prefix = 'Al2SO'
+ fildos = 'Al2SO.dos.dat'
+ emin = -15
+ emax = 15
+/
