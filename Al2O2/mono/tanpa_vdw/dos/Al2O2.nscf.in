@@ -1,0 +1,42 @@
+&CONTROL
+calculation = 'nscf'
+restart_mode ='from_scratch'
+verbosity ='high'
+prefix = 'Al2O2'
+outdir = './work'
+pseudo_dir = '/home/mainadmin/research/danu/pseudo'
+/
+
+&SYSTEM
+ibrav = 0
+nat = 4
+ntyp = 2
+ecutwfc=60
+ecutrho=240
+nbnd = 40
+occupations ='tetrahedra'
+nosym=.TRUE.
+/
+
+&ELECTRONS
+conv_thr = 1d-8
+mixing_beta = 0.5
+/
+
+ATOMIC_SPECIES
+Al 26.981 Al.pbe-n-kjpaw_psl.1.0.0.UPF
+O  15.999 O.pbe-n-kjpaw_psl.1.0.0.UPF
+
+CELL_PARAMETERS (angstrom)
+   2.570893380   1.485916481   0.000000000
+   2.570893380  -1.485916481   0.000000000
+   0.000000000   0.000000000  25.000000000
+
+ATOMIC_POSITIONS (crystal)
+O             0.6667634200        0.6667634200        0.4223775937
+Al            0.3332691534        0.3332691534        0.4488714219
+Al            0.3332384632        0.3332384632        0.5537460258
+O             0.6667289634        0.6667289634        0.5802359586
+
+K_POINTS {automatic}
+52 52 1  0 0 0
