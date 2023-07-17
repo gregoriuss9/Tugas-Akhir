@@ -1,5 +1,0 @@
-&BANDS
-outdir = './work'
-prefix = 'Al2O2'
-filband = 'AA.bands'
-/
