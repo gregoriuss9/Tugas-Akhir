@@ -1,0 +1,5 @@
+&BANDS
+outdir = './work'
+prefix = 'Al2O2'
+filband = 'Al2O2.bands'
+/
