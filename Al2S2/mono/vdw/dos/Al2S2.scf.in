@@ -1,0 +1,40 @@
+&CONTROL
+calculation = 'scf'
+prefix = 'Al2S2'
+outdir = './work'
+pseudo_dir = '/home/mainadmin/research/danu/pseudo'
+verbosity = 'high'
+/
+
+&SYSTEM
+ibrav = 0
+nat = 4
+ntyp = 2
+ecutwfc=60
+ecutrho=240
+input_dft='vdw-df2-b86r'
+nbnd = 30
+/
+
+&ELECTRONS
+conv_thr = 1d-8
+mixing_beta = 0.5
+/
+
+ATOMIC_SPECIES
+Al 26.981 Al.pbe-n-kjpaw_psl.1.0.0.UPF  
+S  32.065 S.pbe-n-kjpaw_psl.1.0.0.UPF 
+
+CELL_PARAMETERS (angstrom)
+   3.087822246   1.786895120   0.000000000
+   3.087822246  -1.786895120   0.000000000
+   0.000000000   0.000000000  25.000000000
+
+ATOMIC_POSITIONS (crystal)
+S             0.6667276289        0.6667276289        0.4066541287
+Al            0.3333129683        0.3333129683        0.4495072629
+Al            0.3332005280        0.3332005280        0.5531099782
+S             0.6667588748        0.6667588748        0.5959596302
+
+K_POINTS {automatic}
+13 13 1  0 0 0
