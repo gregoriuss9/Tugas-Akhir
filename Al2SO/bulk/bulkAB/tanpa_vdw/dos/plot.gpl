@@ -1,0 +1,52 @@
+set terminal pdfcairo font 'Helvetica, 16'
+set output 'DOS.pdf'
+
+input = 'AB.dos.dat'
+
+E_gap =1.174
+E_fermi =5.674
+
+
+Emax = 5.0
+Emin = -5.0
+
+set title "Al2SO Bulk AB Density of States"
+
+set yrange[Emin:Emax]
+
+set ytics 2
+#set xtics 2
+
+
+set ylabel "{/Helvetica-Italic E}-{/Helvetica-Italic E}_F (eV)"
+set xlabel "DOS (states/eV/u.c)"
+
+set xzeroaxis
+
+plot input using 2:($1-E_fermi) with lines lc rgb "blue" notitle
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
